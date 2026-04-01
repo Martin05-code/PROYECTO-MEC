@@ -1,0 +1,46 @@
+/* 
+selector {
+    property: value;
+}
+elemnto/etiqueta
+  ID
+  Clase
+
+
+*/
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+h1 {
+    color: red;
+}
+h2 {
+    color: blue;
+}
+main {
+    background-color: rgb(114, 192, 255);
+    color: white;
+}
+ul li {
+    color: blueviolet;
+}
+h1, h2 {
+     font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}   
+p {
+    font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+main img {
+    width: 50px;
+    height: auto;
+}
+h1 {
+    font-family: "Press Start 2P", system-ui;
+  font-weight: 200;
+  font-style: normal;
+  text-align: center;
+
+}
