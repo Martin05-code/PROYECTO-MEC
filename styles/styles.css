@@ -288,13 +288,13 @@ footer .wats {
 .main-tienda h2 {
   margin: 20px 0;
 }
-.main-tienda .notebooks {
+.main-tienda .camisetas {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
   justify-content: center;
 }
-.main-tienda .notebooks article {
+.main-tienda .camisetas article {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -303,54 +303,13 @@ footer .wats {
   border-radius: 15px;
   margin: 20px 80px;
 }
-.main-tienda .notebooks article .img-tienda {
+.main-tienda .camisetas article .img-tienda {
   height: 30vh;
   width: auto;
   margin: 25px;
   border-radius: 15px;
 }
-.main-tienda .perifericos {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-}
-.main-tienda .perifericos article {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-  border: 2px solid black;
-  border-radius: 15px;
-  margin: 20px 80px;
-}
-.main-tienda .perifericos article .img-tienda {
-  height: 30vh;
-  width: auto;
-  margin: 25px;
-  border-radius: 15px;
-}
-.main-tienda .celus {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-}
-.main-tienda .celus article {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-  border: 2px solid black;
-  border-radius: 15px;
-  margin: 20px 80px;
-}
-.main-tienda .celus article .img-tienda {
-  height: 30vh;
-  width: auto;
-  margin: 25px;
-  border-radius: 15px;
-}
+
 @media (max-width: 425px) {
   .main-tienda {
     margin-top: 30px;

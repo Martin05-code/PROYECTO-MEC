@@ -4,45 +4,11 @@
     h2{
         margin: 20px 0;
     }
-    .notebooks{
+    .camisetas{
         display: flex;
         flex-flow: row wrap;
         align-items: center;
         justify-content: center;
-        article{
-            @include flex-row;
-            flex-direction: column;
-            @include border-tienda;
-            .img-tienda{
-                height: 30vh;
-                width: auto;
-                margin: 25px;
-                border-radius: 15px;
-            }
-        }
-    }
-    .perifericos{
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        align-items: center;
-        article{
-            @include flex-row;
-            flex-direction: column;
-            @include border-tienda;
-            .img-tienda{
-                height: 30vh;
-                width: auto;
-                margin: 25px;
-                border-radius: 15px;
-            }
-        }
-    }
-    .celus{
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        align-items: center;
         article{
             @include flex-row;
             flex-direction: column;
