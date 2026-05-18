@@ -1,0 +1,105 @@
+/* Importación de fuente */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Estilos Generales */
+body {
+    margin: 0;
+    height: 100vh; 
+    
+    /* Tu configuración de fondo mejorada */
+    background-image: url("../assets/Fondo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Tipografía Compartida */
+h1, h2, p {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+}
+
+/* Encabezado */
+h1 {
+    color: #ff0000;
+    text-align: center;
+    font-size: 1.5rem; /* Tamaño ajustable */
+    padding: 20px;
+    text-shadow: 2px 2px #000;
+}
+
+/* Responsive para títulos (más pequeños en móviles) */
+@media (max-width: 600px) {
+    h1 { font-size: 1rem; }
+    h2 { font-size: 0.8rem; }
+    p { font-size: 0.7rem; }
+}
+
+h2 {
+    color: rgb(0, 255, 0);
+    text-shadow: 1px 1px #000;
+}
+
+
+/* El main se "estira" para ocupar el espacio sobrante */
+main {
+    flex: 1; /* Esto empuja al footer hacia abajo del todo */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center;     /* Centra el contenido horizontalmente */
+    
+    background-color: rgba(0, 0, 0, 0.6); /* Un fondo oscuro semitransparente para que resalte el texto */
+    margin: 20px;
+    padding: 40px;
+    border-radius: 20px;
+    border: 4px solid rgb(0, 255, 0); /* Un borde estilo retro que combina con tu H2 */
+}
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+}
+
+.whatsapp img {
+    width: 60px;
+    height: 60px;
+}
+
+/* Listas y Enlaces */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li a {
+    color: blueviolet;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+ul li a:hover {
+    color: #fff;
+    text-shadow: 0 0 5px blueviolet;
+}
+
+/* Imágenes */
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+}
+
+.social-icons img:hover {
+    transform: s
+}
+
+.logo-principal {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}

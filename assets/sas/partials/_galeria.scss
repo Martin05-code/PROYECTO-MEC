@@ -1,0 +1,70 @@
+@use "variables" as v;
+@use "anims";
+
+.galeria {
+    display: grid;
+    grid-template-areas:
+        "martin mec equipo"
+        "ernesto charbo charbo-mec"
+        "ernesto-mec podio-ernesto mectrio"
+        "podio-mec mec-podio martin-mec"
+    ;
+    gap: 30px;
+    justify-content: space-around;
+    justify-items: center;
+    img{
+        height: 60vh;
+        width: auto;
+        border-radius: 15px;
+        &:hover{
+            @extend %scaleUp;
+            z-index: 2;
+        }
+    }
+    .martin{
+         grid-area: martin;
+    }
+    .mec{
+        grid-area: mec;
+    }
+    .equipo{
+        grid-area: equipo;
+    }
+    .ernesto{
+        grid-area: ernesto;
+    }
+    .charbo{
+        grid-area: charbo;
+    }
+    .charbo-mec{
+        grid-area: charbo-mec;
+    }
+    .ernesto-mec{
+        grid-area: ernesto-mec;
+    }
+    .podio-ernesto{
+        grid-area: podio-ernesto;
+    }
+    .mectrio{
+        grid-area: mectrio;
+    }
+    .podio-mec{
+        grid-area: podio-mec;
+    }
+    .mec-podio{
+        grid-area: mec-podio;
+    }
+    .martin-mec{
+        grid-area: martin-mec;
+    }
+    @include v.mobile{
+        grid-template-areas:
+        "martin"
+        "mec"
+        "equipo"
+        ;
+        img{
+            height: 50vh;
+        }
+    }
+}

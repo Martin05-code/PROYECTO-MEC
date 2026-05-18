@@ -1,0 +1,42 @@
+@use "variables" as v;
+
+header{
+    background-color: v.$colorSecundario;
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+    h1{
+        font-size: 1.25rem;
+        span{
+            font-size: 0.75rem;
+            color: gold;
+        }
+    }
+    .logo{
+        height: 10vh;
+        width: auto;
+    }
+    .fondo{
+        background-color: gold;
+    }
+    .navbar-nav{
+        gap: 20px;
+        text-align: center;
+        .dropdown-menu{
+            background-color: v.$colorSecundario;
+            text-align: center;
+        }
+        .nav-link, .dropdown-item{
+            text-decoration: none;
+            color: gold;
+            border: 1px solid gold;
+            border-radius: 15px;
+            font-weight: bold;
+        &:hover{
+            background-color: gold;
+            color: rgb(39, 36, 36);
+            border: 1px solid rgb(39, 36, 36);
+            }
+        }
+    }
+}

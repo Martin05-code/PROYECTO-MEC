@@ -1,0 +1,31 @@
+@keyframes scale {
+    from{
+        scale: 1;
+    }
+    to{
+        scale: 1.5;
+    }
+}
+
+%scaleUp{
+    animation: scale 1s forwards ease-in-out;
+}
+
+@keyframes whatsapp {
+    0%{
+        transform: translateX(0);
+    }
+    20%{
+        transform: translateX(10px);
+    }
+    40%{
+        transform: translateX(-10px);
+    }
+    60%{
+        transform: translateX(0);
+    }
+}
+
+%vibrar{
+    animation: whats 2s infinite ease-in-out;
+}

@@ -1,0 +1,12 @@
+//sass --watch sass/main.scss styles/style.css
+
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@use "utilities/variables" as *;
+@use "sass/header" as *;
+@use "sass/footer" as *;
+@use "sass/camino" as *;

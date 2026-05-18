@@ -1,0 +1,39 @@
+@use "variables" as v;
+@use "anims";
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+    h2{
+        font-size: 1rem;
+    }
+    .f-nav{
+        width: 25vw;
+        display: flex;
+        justify-content: space-around;
+        li{
+            list-style: none;
+            .rrss{
+                height: 8vh;
+                width: auto;
+            }
+            .whatsapp{
+                position: fixed;
+                bottom: 100px;
+                right: 50px;
+                @extend %vibrar;
+            }
+        }
+    }
+    @include v.mobile{
+        flex-direction: column;
+        gap: 20px;
+        .f-nav{
+            justify-content: center;
+            gap: 20px;
+        }
+    }
+}
