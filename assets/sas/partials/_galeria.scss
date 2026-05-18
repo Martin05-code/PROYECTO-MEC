@@ -1,70 +1,101 @@
-@use "variables" as v;
-@use "anims";
-
-.galeria {
-    display: grid;
-    grid-template-areas:
-        "martin mec equipo"
-        "ernesto charbo charbo-mec"
-        "ernesto-mec podio-ernesto mectrio"
-        "podio-mec mec-podio martin-mec"
-    ;
-    gap: 30px;
-    justify-content: space-around;
-    justify-items: center;
-    img{
-        height: 60vh;
-        width: auto;
-        border-radius: 15px;
-        &:hover{
-            @extend %scaleUp;
-            z-index: 2;
+.gmain{
+    margin: 50px 0;
+    .galery{
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        grid-template-areas:
+        "a51 bangho bangho ip14"
+        "hp hp acer acer"
+        "redmi tmars tmars mtdagger"
+        "moni tnoga thyperx mgenius"
+        ;
+        gap: 30px 0;
+        justify-content: space-evenly;
+        img{
+            border: 5px solid black;
+            border-radius: 20px;
+        }
+        .celu{
+            height: 40vh;
+            width: auto;
+        }
+        .note{
+            width: 40vw;
+            height: 40vh;
+        }
+        .mouse{
+            height: 40vh;
+            width: 15vw;
+        }
+        .teclado{
+            height: 40vh;
+            width: 40vw;
+        }
+        .a51{
+            grid-area: a51;
+        }
+        .ip14{
+            grid-area: ip14;
+        }
+        .redmi{
+            grid-area: redmi;
+        }
+        .bangho{
+            grid-area: bangho;
+        }
+        .hp{
+            grid-area: hp;
+        }
+        .acer{
+            grid-area: acer;
+        }
+        .thyperx{    
+            grid-area: thyperx;
+            width: 25vw;
+        }
+        .tmars{    
+            grid-area: tmars;
+        }
+        .tnoga{    
+            grid-area: tnoga;
+            width: 25vw;
+        }
+        .mtdagger{    
+            grid-area: mtdagger;
+        }
+        .moni{    
+            grid-area: moni;
+        }
+        .mgenius{    
+            grid-area: mgenius;
         }
     }
-    .martin{
-         grid-area: martin;
-    }
-    .mec{
-        grid-area: mec;
-    }
-    .equipo{
-        grid-area: equipo;
-    }
-    .ernesto{
-        grid-area: ernesto;
-    }
-    .charbo{
-        grid-area: charbo;
-    }
-    .charbo-mec{
-        grid-area: charbo-mec;
-    }
-    .ernesto-mec{
-        grid-area: ernesto-mec;
-    }
-    .podio-ernesto{
-        grid-area: podio-ernesto;
-    }
-    .mectrio{
-        grid-area: mectrio;
-    }
-    .podio-mec{
-        grid-area: podio-mec;
-    }
-    .mec-podio{
-        grid-area: mec-podio;
-    }
-    .martin-mec{
-        grid-area: martin-mec;
-    }
-    @include v.mobile{
-        grid-template-areas:
-        "martin"
-        "mec"
-        "equipo"
-        ;
-        img{
-            height: 50vh;
+    @include mobile{
+        .galery{
+            width: 100vw;
+            grid-template-areas: 
+            "a51"
+            "ip14"
+            "redmi"
+            "bangho"
+            "hp"
+            "acer"
+            "thyperx"
+            "tmars"
+            "tnoga"
+            "mtdagger"
+            "moni"
+            "mgenius"
+            ;
+            .celu, .mouse{
+            height: 30vh;
+            width: 40vw;
+            }
+            .note, .teclado{
+            height: 30vh;
+            width: 60vw;
+            }
         }
     }
 }

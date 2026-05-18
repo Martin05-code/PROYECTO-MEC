@@ -1,41 +1,35 @@
-@use "variables" as v;
-
 header{
-    background-color: v.$colorSecundario;
-    position: sticky;
-    top: 0px;
-    z-index: 2;
+    @include flex-row;
+    height: 15vh;
     h1{
-        font-size: 1.25rem;
-        span{
-            font-size: 0.75rem;
-            color: gold;
-        }
+        color: rgb(75, 74, 74);
     }
     .logo{
-        height: 10vh;
-        width: auto;
+        height: 15vh;
+        width: 15vw;
+        border-radius: 20px;
     }
-    .fondo{
-        background-color: gold;
-    }
-    .navbar-nav{
-        gap: 20px;
-        text-align: center;
-        .dropdown-menu{
-            background-color: v.$colorSecundario;
-            text-align: center;
+    .navegacion{
+        @include flex-row;
+        li{
+            list-style: none;
+            padding: 10px;
+            font-weight: 700;
         }
-        .nav-link, .dropdown-item{
-            text-decoration: none;
-            color: gold;
-            border: 1px solid gold;
-            border-radius: 15px;
-            font-weight: bold;
-        &:hover{
-            background-color: gold;
-            color: rgb(39, 36, 36);
-            border: 1px solid rgb(39, 36, 36);
+    }
+    @include mobile{
+        margin-top: 10px;
+        .logo{
+            height: 15vh;
+            width: auto;
+        }
+        h1{
+            display: none;
+        }
+        .navegacion{
+            flex-direction: column;
+            li{
+                padding: 2px;
             }
         }
     }

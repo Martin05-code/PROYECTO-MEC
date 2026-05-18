@@ -1,24 +1,32 @@
-@use "variables" as v;
-
-.fundadores{
-    display: flex;
-    flex-wrap: wrap;
+.main-qs{
+    margin: 25px;
+    @include flex-row;
     justify-content: center;
-    gap: 20px;
-    .card{
-        background-color: rgb(0, 151, 113);
-        border: 2px solid gold;
-        width: 30vw;
-        .card-body{
-            text-align: center;
-            color: gold;
+    section{
+        h2{
+            margin-bottom: 50px;
+            justify-self: center;
+            text-decoration: underline;
+        }
+        p{
+            font-size: 1.2rem;
+            margin: 20px 0;
         }
     }
-    @include v.mobile{
+    .somos-nosotros{
+        height: 70vh;
+        border-radius: 25px;
+    }
+    @include mobile{
         flex-direction: column;
-        align-items: center;
-        .card{
-            width: 80vw;
+        section{
+            h2{
+                margin-bottom: 20px;
+            }
         }
+        .somos-nosotros{
+            height: 50vh;
+            width: auto;
+            }
     }
 }
