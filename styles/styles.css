@@ -1,319 +1,435 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   text-decoration: none;
-  color: black;
-  font-family: Roboto;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
-  background-color: rgb(170, 169, 169);
+  background-color: rgb(3, 163, 168);
+  overflow-x: hidden;
 }
+body {
+  zoom: 1.3;
+}
+
+main {
+  width: 95%;
+  margin: auto;
+}
+
+/* =========================
+HEADER
+========================= */
 
 header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 15vh;
+  padding: 20px;
+  flex-wrap: wrap;
+  gap: 20px;
 }
+
 header h1 {
-  color: rgb(75, 74, 74);
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-align: center;
+
+  background: linear-gradient(90deg, #ffffff, #000000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow: 0 0 10px rgba(255,255,255,0.3);
+
+  animation: glow 2s infinite alternate;
 }
-header .logo {
-  height: 15vh;
-  width: 15vw;
+
+.logo {
+  height: 90px;
+  width: auto;
   border-radius: 20px;
 }
-header .navegacion {
+
+.navegacion {
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  gap: 20px;
 }
-header .navegacion li {
+
+.navegacion li {
   list-style: none;
-  padding: 10px;
+}
+
+.navegacion li a {
+  color: black;
   font-weight: 700;
+  transition: 0.3s;
 }
-@media (max-width: 425px) {
-  header {
-    margin-top: 10px;
-  }
-  header .logo {
-    height: 15vh;
-    width: auto;
-  }
-  header h1 {
-    display: none;
-  }
-  header .navegacion {
-    flex-direction: column;
-  }
-  header .navegacion li {
-    padding: 2px;
-  }
+
+.navegacion li a:hover {
+  color: white;
 }
+
+/* =========================
+FOOTER
+========================= */
 
 footer {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin: 0 10px;
-}
-footer .rrss {
-  height: 8vh;
-  width: auto;
-  margin: 0 10px;
-}
-footer .wats {
-  position: fixed;
-  right: 30px;
-  bottom: 60px;
-}
-@media (max-width: 425px) {
-  footer {
-    flex-direction: column;
-  }
+  gap: 20px;
+  padding: 20px;}
   footer section {
-    margin: 20px 0;
+  display: flex;
+  gap: 20px;
+}
+
+footer h2 {
+  font-size: 1rem;
+  text-align: center;
+}
+
+footer section {
+  display: flex;
+  gap: 15px;
+}
+
+.rrss {
+  height: 45px;
+  width: auto;
+}
+
+.wats {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 999;
+  animation: vibrar 1s infinite;
+}
+
+/* =========================
+ANIMACION WHATSAPP
+========================= */
+
+@keyframes vibrar {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(5px);
+  }
+
+  50% {
+    transform: translateX(-5px);
+  }
+
+  75% {
+    transform: translateX(5px);
+  }
+
+  100% {
+    transform: translateX(0);
   }
 }
+
+/* =========================
+HOME
+========================= */
 
 .main-nav {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
   justify-content: center;
-  margin: 10px;
-}
-.main-nav article {
-  margin: 20px;
-  display: flex;
-  justify-content: space-around;
   align-items: center;
-  flex-direction: column;
-}
-.main-nav article .router {
-  height: 40vh;
-  width: auto;
-  border-radius: 25px;
-}
-@media (max-width: 425px) {
-  .main-nav {
-    flex-direction: column;
-  }
+  gap: 40px;
+  padding: 40px 20px;
+  flex-wrap: wrap;
 }
 
-.home {
-  height: 75vh;
+.main-nav article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
-@media (max-width: 425px) {
-  .home {
-    height: max-content;
-  }
+
+.router {
+  width: 420px;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: 0.3s;
 }
+
+.router:hover {
+  transform: scale(1.05);
+}
+
+.main-nav h2 {
+  color: black;
+}
+
+/* =========================
+CONTACTO
+========================= */
 
 .main-contact {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  gap: 40px;
+  padding: 40px;
+  flex-wrap: wrap;
 }
+
 .main-contact form {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
   flex-direction: column;
+  gap: 15px;
 }
+
 .main-contact form label {
-  font-size: 24px;
-  font-weight: 600;
-  margin: 10px 0;
+  font-weight: bold;
 }
-.main-contact form input {
-  height: 5vh;
-  width: 20vw;
-}
+
+.main-contact form input,
 .main-contact form textarea {
-  height: 20vh;
-  width: 20vw;
+  width: 350px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
 }
+
+.main-contact form textarea {
+  height: 150px;
+  resize: none;
+}
+
 .main-contact iframe {
-  justify-self: center;
-  align-self: center;
+  border-radius: 20px;
+  width: 400px;
+  max-width: 80vw;
 }
-@media (max-width: 425px) {
-  .main-contact {
-    flex-direction: column;
-    align-items: center;
-  }
-  .main-contact form {
-    margin: 10px 0;
-  }
-  .main-contact form input {
-    width: 80vw;
-  }
-  .main-contact form iframe {
-    margin: 20px 0;
-    height: 40vh;
-    width: 80vw;
-  }
-  .main-contact form textarea {
-    width: 80vw;
-  }
-}
+
+/* =========================
+FUNDADORES
+========================= */
 
 .main-qs {
-  margin: 25px;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
   justify-content: center;
-}
-.main-qs section h2 {
-  margin-bottom: 50px;
-  justify-self: center;
-  text-decoration: underline;
-}
-.main-qs section p {
-  font-size: 1.2rem;
-  margin: 20px 0;
-}
-.main-qs .somos-nosotros {
-  height: 70vh;
-  border-radius: 25px;
-}
-@media (max-width: 425px) {
-  .main-qs {
-    flex-direction: column;
-  }
-  .main-qs section h2 {
-    margin-bottom: 20px;
-  }
-  .main-qs .somos-nosotros {
-    height: 50vh;
-    width: auto;
-  }
+  align-items: center;
+  gap: 40px;
+  padding: 40px;
+  flex-wrap: wrap;
 }
 
-.gmain {
-  margin: 50px 0;
+.main-qs section {
+  max-width: 600px;
 }
-.gmain .galery {
-  display: grid;
-  align-items: center;
-  justify-items: center;
-  grid-template-areas: "a51 bangho bangho ip14" "hp hp acer acer" "redmi tmars tmars mtdagger" "moni tnoga thyperx mgenius";
-  gap: 30px 0;
-  justify-content: space-evenly;
+
+.main-qs section h2 {
+  margin-bottom: 20px;
 }
-.gmain .galery img {
-  border: 5px solid black;
+
+.main-qs section p {
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.fundadores {
+  width: 350px;
   border-radius: 20px;
 }
-.gmain .galery .celu {
-  height: 40vh;
-  width: auto;
+
+/* =========================
+GALERIA
+========================= */
+
+.gmain {
+  width: 100%;
+  padding: 40px 20px;
 }
-.gmain .galery .note {
-  width: 40vw;
-  height: 40vh;
+
+.galery {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+  gap: 25px;
+
+  justify-items: center;
+
+  align-items: center;
 }
-.gmain .galery .mouse {
-  height: 40vh;
-  width: 15vw;
+
+.galery img {
+  width: 100%;
+
+  max-width: 320px;
+
+  height: 320px;
+
+  object-fit: cover;
+
+  border-radius: 20px;
+
+  border: 3px solid black;
+
+  transition: 0.3s;
 }
-.gmain .galery .teclado {
-  height: 40vh;
-  width: 40vw;
+
+.galery img:hover {
+  transform: scale(1.03);
 }
-.gmain .galery .a51 {
-  grid-area: a51;
-}
-.gmain .galery .ip14 {
-  grid-area: ip14;
-}
-.gmain .galery .redmi {
-  grid-area: redmi;
-}
-.gmain .galery .bangho {
-  grid-area: bangho;
-}
-.gmain .galery .hp {
-  grid-area: hp;
-}
-.gmain .galery .acer {
-  grid-area: acer;
-}
-.gmain .galery .thyperx {
-  grid-area: thyperx;
-  width: 25vw;
-}
-.gmain .galery .tmars {
-  grid-area: tmars;
-}
-.gmain .galery .tnoga {
-  grid-area: tnoga;
-  width: 25vw;
-}
-.gmain .galery .mtdagger {
-  grid-area: mtdagger;
-}
-.gmain .galery .moni {
-  grid-area: moni;
-}
-.gmain .galery .mgenius {
-  grid-area: mgenius;
-}
-@media (max-width: 425px) {
-  .gmain .galery {
-    width: 100vw;
-    grid-template-areas: "a51" "ip14" "redmi" "bangho" "hp" "acer" "thyperx" "tmars" "tnoga" "mtdagger" "moni" "mgenius";
-  }
-  .gmain .galery .celu, .gmain .galery .mouse {
-    height: 30vh;
-    width: 40vw;
-  }
-  .gmain .galery .note, .gmain .galery .teclado {
-    height: 30vh;
-    width: 60vw;
-  }
-}
+
+/* =========================
+TIENDA
+========================= */
 
 .main-tienda {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
   flex-direction: column;
-}
-.main-tienda h2 {
-  margin: 20px 0;
-}
-.main-tienda .camisetas {
-  display: flex;
-  flex-flow: row wrap;
   align-items: center;
-  justify-content: center;
-}
-.main-tienda .camisetas article {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-  border: 2px solid black;
-  border-radius: 15px;
-  margin: 20px 80px;
-}
-.main-tienda .camisetas article .img-tienda {
-  height: 30vh;
-  width: auto;
-  margin: 25px;
-  border-radius: 15px;
+  padding: 40px 20px;
 }
 
-@media (max-width: 425px) {
-  .main-tienda {
-    margin-top: 30px;
+.main-tienda h2 {
+  margin-bottom: 30px;
+}
+
+.camisetas {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.camisetas article {
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  width: 300px;
+}
+
+.img-tienda {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin: 15px 0;
+}
+
+/* =========================
+SPOTIFY
+========================= */
+
+.spotify {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.spotify iframe {
+  width: 80vw;
+  max-width: 700px;
+  border-radius: 20px;
+}
+
+/* =========================
+TABLET
+========================= */
+
+@media (max-width: 1024px) {
+
+  header {
+    flex-direction: column;
+  }
+
+  .navegacion {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .router {
+    width: 250px;
+    height: 250px;
+  }
+
+  .main-contact iframe {
+    width: 90vw;
   }
 }
 
-/*# sourceMappingURL=styles.css.map */
+/* =========================
+CELULAR
+========================= */
+
+@media (max-width: 768px) {
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .navegacion {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .router {
+    width: 90vw;
+    height: auto;
+  }
+
+  .main-contact {
+    padding: 20px;
+  }
+
+  .main-contact form input,
+  .main-contact form textarea {
+    width: 90vw;
+  }
+
+  .fundadores {
+    width: 90vw;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .rrss {
+    height: 40px;
+  }
+
+  .galery {
+    grid-template-columns: 1fr;
+  }
+
+  .galery img {
+    max-width: 90vw;
+    height: auto;
+  }
+}
+  @keyframes glow {
+  from {
+    transform: scale(1);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+
+  to {
+    transform: scale(1.03);
+    text-shadow: 0 0 20px rgba(0, 225, 255, 0.8);
+  }
+}
+}
