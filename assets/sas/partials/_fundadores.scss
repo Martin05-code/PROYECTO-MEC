@@ -1,32 +1,147 @@
-.main-qs{
-    margin: 25px;
-    @include flex-row;
-    justify-content: center;
-    section{
-        h2{
-            margin-bottom: 50px;
-            justify-self: center;
-            text-decoration: underline;
-        }
-        p{
-            font-size: 1.2rem;
-            margin: 20px 0;
-        }
-    }
-    .somos-nosotros{
-        height: 70vh;
-        border-radius: 25px;
-    }
-    @include mobile{
-        flex-direction: column;
-        section{
-            h2{
-                margin-bottom: 20px;
-            }
-        }
-        .somos-nosotros{
-            height: 50vh;
-            width: auto;
-            }
-    }
+/* =========================
+FUNDADORES
+========================= */
+
+.main-fundadores {
+  width: 95%;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+/* TITULO */
+
+.titulo-fundadores {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.titulo-fundadores h2 {
+  font-size: 3.5rem;
+  margin-bottom: 25px;
+  color: white;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.titulo-fundadores p {
+  max-width: 950px;
+  margin: auto;
+  font-size: 1.2rem;
+  line-height: 1.9;
+  color: black;
+  font-weight: 500;
+}
+
+/* CARDS */
+
+.cards-fundadores {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* CARD INDIVIDUAL */
+
+.card-fundador {
+  width: 340px;
+  padding: 25px;
+
+  border-radius: 30px;
+
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255,255,255,0.25);
+
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+
+  text-align: center;
+
+  transition: 0.4s;
+}
+
+.card-fundador:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+/* IMAGENES */
+
+.card-fundador img {
+  width: 100%;
+  height: 380px;
+
+  object-fit: cover;
+
+  border-radius: 25px;
+
+  margin-bottom: 25px;
+
+  border: 4px solid white;
+
+  box-shadow: 0 0 15px rgba(0,0,0,0.35);
+}
+
+/* TITULO CARD */
+
+.card-fundador h3 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+/* TEXTO */
+
+.card-fundador p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: white;
+  font-weight: 400;
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media (max-width: 1024px) {
+
+  .cards-fundadores {
+    gap: 30px;
+  }
+
+  .card-fundador {
+    width: 320px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .main-fundadores {
+    padding: 40px 15px;
+  }
+
+  .titulo-fundadores h2 {
+    font-size: 2.3rem;
+  }
+
+  .titulo-fundadores p {
+    font-size: 1rem;
+  }
+
+  .card-fundador {
+    width: 95%;
+  }
+
+  .card-fundador img {
+    height: 320px;
+  }
+
+  .card-fundador h3 {
+    font-size: 1.7rem;
+  }
+
 }

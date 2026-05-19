@@ -1,27 +1,149 @@
-.main-tienda{
-    @include flex-row;
+/* =========================
+TIENDA
+========================= */
+
+.main-tienda {
+
+    padding: 50px 20px;
+
+    display: flex;
+
     flex-direction: column;
-    h2{
-        margin: 20px 0;
+
+    align-items: center;
+
+}
+
+.main-tienda h2 {
+
+    font-size: 3rem;
+
+    margin-bottom: 50px;
+
+    text-align: center;
+
+}
+
+/* =========================
+CONTENEDOR PRODUCTOS
+========================= */
+
+.camisetas {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 40px;
+
+}
+
+/* =========================
+CARD PRODUCTO
+========================= */
+
+.card-tienda {
+
+    width: 320px;
+
+    background-color: white;
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+
+    transition: 0.3s;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    padding-bottom: 25px;
+
+}
+
+.card-tienda:hover {
+
+    transform: translateY(-10px);
+
+}
+
+/* =========================
+IMAGENES
+========================= */
+
+.img-tienda {
+
+    width: 100%;
+
+    height: 350px;
+
+    object-fit: cover;
+
+}
+
+/* =========================
+TEXTOS
+========================= */
+
+.card-tienda h3 {
+
+    margin-top: 20px;
+
+    font-size: 1.4rem;
+
+    text-align: center;
+
+}
+
+.card-tienda p {
+
+    margin: 15px 20px;
+
+    text-align: center;
+
+    line-height: 1.5;
+
+}
+
+.card-tienda span {
+
+    font-size: 1.5rem;
+
+    font-weight: 900;
+
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    .main-tienda h2{
+
+        font-size: 2rem;
+
     }
-    .camisetas{
-        display: flex;
-        flex-flow: row wrap;
-        align-items: center;
-        justify-content: center;
-        article{
-            @include flex-row;
-            flex-direction: column;
-            @include border-tienda;
-            .img-tienda{
-                height: 30vh;
-                width: auto;
-                margin: 25px;
-                border-radius: 15px;
-            }
-        }
+
+    .card-tienda{
+
+        width: 90vw;
+
     }
-    @include mobile{
-        margin-top: 30px;
+
+    .img-tienda{
+
+        height: 300px;
+
     }
+
 }
